@@ -33,29 +33,10 @@ export default function () {
           );
         })}
       </div>
-      <div className="mt-3 p-3 flex flex-row justify-center items-center bg-blue-100 rounded-lg">
-        <p
-          class={`ms-3 text-sm font-medium  dark:text-gray-300 mr-2 ${monthYear ? "text-gray-900" : "text-slate-300"}`}
-        >
-          Monthly
-        </p>
-        <label class="inline-flex items-center cursor-pointer">
-          <input
-            type="checkbox"
-            value=""
-            class="sr-only peer"
-            checked
-            onChange={(e) => {
-              setMonthYear(e.target.value);
-            }}
-          />
-          <div class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
-        </label>{" "}
-        <p
-          class={`ms-3 text-sm font-medium  dark:text-gray-300 mr-2 ${!monthYear ? "text-gray-900" : "text-slate-300"}`}
-        >
-          Yearly
-        </p>
+      <div className="mt-5 bg-slate-100 py-2 gap-5 flex flex-row justify-center items-center rounded-lg">
+        <p className={`text-slate-500 font-bold text-sm ${monthYear&&'text-blue-950'}`}>Monthly</p>
+        <input type="checkbox" className="toggle bg-white border-white" onClick={()=>{setMonthYear(!monthYear)}} />
+        <p className={`text-slate-500 font-bold text-sm ${!monthYear&&'text-blue-950'}`}>Yearly</p>
       </div>
     </div>
   );
