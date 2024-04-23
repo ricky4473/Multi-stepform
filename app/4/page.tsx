@@ -4,7 +4,6 @@ import { useState,useContext } from 'react'
 import {InfomationCollection} from '@/components/Global'
 import { useRouter } from 'next/navigation'
 
-export const dynamic='force-dymanic'
 
 export default function Summary() {
     const router=useRouter()
@@ -25,7 +24,7 @@ export default function Summary() {
           <div className=" mt-3 p-4 bg-slate-100 rounded-lg">
             <div className="flex flex-row justify-between items-center">
               <div className="">
-                <p className="font-semibold">{collection[1].selectedPlan} ({collection[1].monthYear})</p>
+                <p className="font-semibold">{collection[1].selectedPlan||''} ({collection[1].monthYear||''})</p>
                 <p className="text-[13px] text-slate-400">Change</p>
               </div>
               <div className="font-semibold">$9/mo</div>
@@ -36,7 +35,7 @@ export default function Summary() {
                 <p className="text-slate-400">{item}</p>
               </div>
               <div className="">+$1/mo</div>
-            </div>)}
+            </div>)||''}
             
           </div>
           <div className="flex flex-row justify-between items-center p-4">
