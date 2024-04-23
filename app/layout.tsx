@@ -21,14 +21,14 @@ export const metadata: Metadata = {
 const Step = ({ step, title, active = false }) => {
   const activeClass = active ? 'bg-sky-200 text-black' : 'text-white'
   return (
-    <div class="flex flex-row items-center uppercase mb-4">
+    <div className="flex flex-row items-center uppercase mb-4">
       <p
-        class={`mr-4 flex h-8 w-8 items-center justify-center rounded-full border border-white  p-1 text-center text-xs font-semibold  ${activeClass}`}>
+        className={`mr-4 flex h-8 w-8 items-center justify-center rounded-full border border-white  p-1 text-center text-xs font-semibold  ${activeClass}`}>
         <span>{step}</span>
       </p>
-      <div class="flex flex-col">
-        <p class="text-[10px] text-slate-300">step {step}</p>
-        <p class="text-[13px] font-[500]">{title}</p>
+      <div className="flex flex-col">
+        <p className="text-[10px] text-slate-300">step {step}</p>
+        <p className="text-[13px] font-[500]">{title}</p>
       </div>
     </div>
   )
@@ -38,12 +38,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={myFont.className}>
-        <div class="flex h-screen items-center justify-center bg-blue-100 py-[10%]">
-          <div class=" h-[400px] w-[700px] grid grid-cols-12 bg-white p-2 rounded-lg">
+        <div className="flex h-screen items-center justify-center bg-blue-100 py-[10%]">
+          <div className=" h-[400px] w-[700px] grid grid-cols-12 bg-white p-2 rounded-lg">
             <div
-              class="relative col-span-4 rounded-lg bg-cover p-5 text-white"
+              className="relative col-span-4 rounded-lg bg-cover p-5 text-white"
               style={{
-                'background-image':
+                'background':
                   "url('https://github.com/ricky4473/Multi-stepform/raw/main/public/images/bg-sidebar-desktop.svg')",
               }}>
               {[
@@ -55,12 +55,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 return <Step key={index} title={item.title} step={item.step} />
               })}
             </div>
-            <div class="col-span-8 px-9 py-2 flex flex-col justify-between text-sky-800">
+            <div className="col-span-8 px-9 py-2 flex flex-col justify-between text-sky-800">
               {children}{' '}
-              <div class="flex flex-row justify-between">
-                <button class="text-slate-400 text-xs hover:text-blue-900">Go Back</button>
+              <div className="flex flex-row justify-between">
+                <button className="text-slate-400 text-xs hover:text-blue-900">Go Back</button>
 
-                <button class="bg-blue-900 text-white text-xs px-3 py-2 rounded-md">
+                <button className="bg-blue-900 text-white text-xs px-3 py-2 rounded-md">
                   Next Step
                 </button>
               </div>

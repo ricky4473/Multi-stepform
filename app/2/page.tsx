@@ -14,12 +14,12 @@ export default function SelectPlan () {
   const [selectedPlan, setSelectedPlan] = useState("Arcade");
   const [monthYear, setMonthYear] = useState(true);
   return (
-    <div class="var">
-      <h1 class="mt-1 text-xl font-semibold">Select your plan</h1>
-      <small class="text-slate-400">
+    <div className="var">
+      <h1 className="mt-1 text-xl font-semibold">Select your plan</h1>
+      <small className="text-slate-400">
         you have the option of monthly or yearly billing.
       </small>
-      <div class="w-full flex flex-row gap-4 justify-between mt-5 ">
+      <div className="w-full flex flex-row gap-4 justify-between mt-5 ">
         {plan.map((item, index) => {
           return (
             <PlanButton

@@ -12,9 +12,9 @@ const PickSelection = [
 export default function Pick () {
   const [pickSelected, setPickSelected] = useState([])
   return (
-    <div class="var">
-      <h1 class="mt-1 text-xl font-semibold">Pick add-ons</h1>
-      <small class="text-slate-400">Add-ons help enhance your gaming experience.</small>
+    <div className="var">
+      <h1 className="mt-1 text-xl font-semibold">Pick add-ons</h1>
+      <small className="text-slate-400">Add-ons help enhance your gaming experience.</small>
       <div className="flex flex-col mt-3 gap-3">
         {PickSelection.map((item, index) => {
           return (

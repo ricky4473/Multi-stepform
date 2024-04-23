@@ -14,8 +14,8 @@ export default function PlanButton ({
     >
       <Image src={image}></Image>
       <div className="text-left">
-        <h1 class=" font-bold">{title}</h1>
-        <p class="text-xs text-slate-400">${price}/mo</p>
+        <h1 className=" font-bold">{title}</h1>
+        <p className="text-xs text-slate-400">${price}/mo</p>
       </div>
     </button>
   );
