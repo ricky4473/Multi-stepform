@@ -1,4 +1,4 @@
-export default function ({ step, title, active }) {
+export default function Step ({ step, title, active }) {
   return (
     <div class="flex flex-row items-center uppercase">
       <p class="mr-4 flex h-8 w-8 items-center justify-center rounded-full border border-white bg-sky-200 p-1 text-center text-xs font-semibold text-black">

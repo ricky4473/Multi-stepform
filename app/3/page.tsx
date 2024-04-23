@@ -9,7 +9,7 @@ const PickSelection = [
   { title: 'Customizable Profile', text: 'Custom theme on your profile', price: 2 },
 ]
 
-export default function () {
+export default function Pick () {
   const [pickSelected, setPickSelected] = useState([])
   return (
     <div class="var">

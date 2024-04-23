@@ -10,7 +10,7 @@ const plan = [
   { image: iconadvanced, title: "Advanced", price: 12 },
   { image: iconpro, title: "Pro", price: 15 },
 ];
-export default function () {
+export default function SelectPlan () {
   const [selectedPlan, setSelectedPlan] = useState("Arcade");
   const [monthYear, setMonthYear] = useState(true);
   return (
