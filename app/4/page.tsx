@@ -4,12 +4,7 @@ import { useState,useContext } from 'react'
 import {InfomationCollection} from '@/components/Global'
 import { useRouter } from 'next/navigation'
 
-export function getStaticPaths(){
-    return{
-        paths:[],
-        fallback:'blocking'
-    }
-}
+export const dynamic='force-dymanic'
 
 export default function Summary() {
     const router=useRouter()
