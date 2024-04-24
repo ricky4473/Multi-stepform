@@ -20,7 +20,7 @@ export default function SelectPlan() {
   const [monthYear, setMonthYear] = useState('Monthly')
   const [collection, setCollection] = useContext(InfomationCollection)
   const onClick=()=>{
-    collection.push({selectedPlan,monthYear})
+    collection.plan={selectedPlan,monthYear}
     setCollection(collection)
     router.push('/3')
 

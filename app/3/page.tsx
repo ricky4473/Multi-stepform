@@ -17,7 +17,7 @@ export default function Pick() {
   const router=useRouter()
   const [collection, setCollection] = useContext(InfomationCollection)
   const onClick=()=>{
-    collection.push({pickSelected})
+    collection.pick={pickSelected}
     setCollection(collection)
     router.push('/4')
 

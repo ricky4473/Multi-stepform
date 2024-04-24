@@ -17,7 +17,7 @@ export default function Home() {
     const phone=ref.current[2].value
     const obj={name,email,phone}
     const tmpcollection = lodash.cloneDeep(collection)
-    tmpcollection.push(obj)
+    tmpcollection.personalInfo=obj
     setCollection(tmpcollection)
     router.push('/2')
   }
