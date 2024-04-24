@@ -25,7 +25,7 @@ const Step = ({ step, title }: myProp) => {
   )
 }
 const Global = ({ children }: { children: React.ReactNode }) => {
-    const [collection,setCollection]= useState({"personalInfo":{name:'',email:'',phone:''},'plan':{},'pick':{}})
+    const [collection,setCollection]= useState({"personalInfo":{name:'',email:'',phone:''},'plan':{selectedPlan:'',monthYear:''},'pick':{pickSelected:[]}})
   return (
     <div className="flex h-screen items-center justify-center bg-blue-100 py-[10%]">
       <div className=" h-[400px] w-[700px] grid grid-cols-12 bg-white p-2 rounded-lg">
