@@ -35,7 +35,6 @@ export default function SelectPlan() {
     plan.selectedPlan = planArr(plan.monthYear)[0]
     setCollection({ ...collection })
   }, [])
-  console.log(collection)
   return (
     <div className="var">
       <h1 className="mt-1 text-xl font-semibold">Select your plan</h1>

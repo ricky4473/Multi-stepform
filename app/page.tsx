@@ -15,11 +15,11 @@ export const InfomationCollection = createContext()
 
 const Var = ({ step, setStep }) => {
   const arr = [
-    <Home setStep={setStep} />,
-    <SelectPlan />,
-    <Pick />,
-    <Summary setStep={setStep} />,
-    <Finish />,
+    <Home key="Home" setStep={setStep} />,
+    <SelectPlan key='SelectPlan' />,
+    <Pick key='Pick' />,
+    <Summary key='Summary' setStep={setStep} />,
+    <Finish key='Finish' />,
   ]
   return arr[step - 1]
 }

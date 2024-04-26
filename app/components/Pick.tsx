@@ -21,7 +21,6 @@ export default function Pick() {
     pick.pickSelected = value
     setCollection({ ...collection })
   }
-  console.log(collection)
   return (
     <div className="var">
       <h1 className="mt-1 text-xl font-semibold">Pick add-ons</h1>
