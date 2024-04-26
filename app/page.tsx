@@ -14,7 +14,13 @@ import Step from '@/components/Step'
 export const InfomationCollection = createContext()
 
 const Var = ({ step, setStep }) => {
-  const arr = [<Home setStep={setStep} />, <SelectPlan />, <Pick />, <Summary setStep={setStep} />, <Finish />]
+  const arr = [
+    <Home setStep={setStep} />,
+    <SelectPlan />,
+    <Pick />,
+    <Summary setStep={setStep} />,
+    <Finish />,
+  ]
   return arr[step - 1]
 }
 

@@ -5,12 +5,12 @@ import { InfomationCollection } from '@/app/page'
 import { useContext } from 'react'
 
 const PickSelection = monthYear => {
-  const arr=[
+  const arr = [
     { title: 'Online service', text: 'Access to multiplayer games', price: 1 },
     { title: 'Larger storage', text: 'Extra 1TB of cloud save', price: 2 },
     { title: 'Customizable Profile', text: 'Custom theme on your profile', price: 2 },
   ]
-  arr.forEach(item=>item.price=monthYear==='Monthly'?item.price:item.price*10)
+  arr.forEach(item => (item.price = monthYear === 'Monthly' ? item.price : item.price * 10))
   return arr
 }
 
@@ -31,7 +31,7 @@ export default function Pick() {
           return (
             <PickAddOns
               key={index}
-             item={item}
+              item={item}
               monthYear={collection.plan.monthYear}
               pickSelected={pick.pickSelected}
               setPickSelected={setPickSelected}

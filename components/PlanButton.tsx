@@ -1,11 +1,6 @@
 import Image from 'next/image'
 
-export default function PlanButton({
-  item,
-  selectedPlan,
-  setSelectedPlan,
-  monthYear,
-}: any) {
+export default function PlanButton({ item, selectedPlan, setSelectedPlan, monthYear }: any) {
   return (
     <button
       onClick={() => setSelectedPlan(item)}
@@ -16,7 +11,7 @@ export default function PlanButton({
       <div className="text-left">
         <h1 className=" font-bold">{item.title}</h1>
         <p className="text-xs text-slate-400">
-          ${monthYear === 'Monthly' ? item.price + '/mo' : item.price  + '/yr'}
+          ${monthYear === 'Monthly' ? item.price + '/mo' : item.price + '/yr'}
         </p>
         <p className="text-xs">{monthYear === 'Yearly' ? '2 months free' : ''}</p>
       </div>
