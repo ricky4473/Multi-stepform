@@ -11,15 +11,13 @@ import Finish from './components/Finish'
 import NextButton from '@/components/NextButton'
 import Step from '@/components/Step'
 
-export const InfomationCollection = createContext()
-
 const Var = ({ step, setStep }) => {
   const arr = [
     <Home key="Home" setStep={setStep} />,
-    <SelectPlan key='SelectPlan' />,
-    <Pick key='Pick' />,
-    <Summary key='Summary' setStep={setStep} />,
-    <Finish key='Finish' />,
+    <SelectPlan key="SelectPlan" />,
+    <Pick key="Pick" />,
+    <Summary key="Summary" setStep={setStep} />,
+    <Finish key="Finish" />,
   ]
   return arr[step - 1]
 }
@@ -58,3 +56,4 @@ const App = () => {
 }
 
 export default App
+export const InfomationCollection = createContext()
