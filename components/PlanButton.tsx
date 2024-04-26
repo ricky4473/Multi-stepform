@@ -1,29 +1,25 @@
-import Image from "next/image";
-interface myProp{
-  image:string
-  title:string
-  price:number
-  selectedPlan:any
-  setSelectedPlan:any
-}
+import Image from 'next/image'
 
-export default function PlanButton ({
-  image,
-  title,
-  price,
+export default function PlanButton({
+  item,
   selectedPlan,
   setSelectedPlan,
-}:myProp) {
+  monthYear,
+}: any) {
   return (
     <button
-      onClick={() => setSelectedPlan(title)}
-      className={`border border-slate-300 hover:border-blue-500 w-full rounded-lg  h-[140px] p-3 flex flex-col justify-between items-start ${selectedPlan === title ? "bg-blue-100" : ""}`}
-    >
-      <Image src={image} alt=""></Image>
+      onClick={() => setSelectedPlan(item)}
+      className={`border  hover:border-blue-500 w-full rounded-lg  h-[140px] p-3 flex flex-col justify-between items-start ${
+        selectedPlan.title === item.title ? 'bg-blue-100 border-blue-500' : 'border-slate-300'
+      }`}>
+      <Image src={item.image} alt=""></Image>
       <div className="text-left">
-        <h1 className=" font-bold">{title}</h1>
-        <p className="text-xs text-slate-400">${price}/mo</p>
+        <h1 className=" font-bold">{item.title}</h1>
+        <p className="text-xs text-slate-400">
+          ${monthYear === 'Monthly' ? item.price + '/mo' : item.price  + '/yr'}
+        </p>
+        <p className="text-xs">{monthYear === 'Yearly' ? '2 months free' : ''}</p>
       </div>
     </button>
-  );
+  )
 }

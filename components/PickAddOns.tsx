@@ -4,16 +4,15 @@ import React from 'react'
 import Image from 'next/image'
 import checkmark from '@/public/images/icon-checkmark.svg'
 import lodash from 'lodash'
-const PickAddOns = ({ title, text, price, pickSelected, setPickSelected }) => {
-  const status = pickSelected.includes(title)
+const PickAddOns = ({ item, pickSelected, setPickSelected, monthYear }) => {
+  const status = pickSelected.find(obj => obj.title === item.title)
   const activeClass = status ? 'bg-blue-500 border-blue-500' : 'bg-white border-slate-300'
   const onClick = () => {
     if (status) {
-      setPickSelected(pickSelected.filter(item => item != title))
+      setPickSelected(pickSelected.filter(obj => obj.title != item.title))
     } else {
-      const tmp = lodash.cloneDeep(pickSelected)
-      tmp.push(title)
-      setPickSelected(tmp)
+      pickSelected.push(item)
+      setPickSelected([...pickSelected])
     }
   }
   return (
@@ -29,11 +28,13 @@ const PickAddOns = ({ title, text, price, pickSelected, setPickSelected }) => {
               border  rounded p-1 mr-4 ${activeClass}`}
         />
         <div className="">
-          <h1 className="font-[500]">{title}</h1>
-          <p className="text-[13px] text-slate-400">{text}</p>
+          <h1 className="font-[500]">{item.title}</h1>
+          <p className="text-[13px] text-slate-400">{item.text}</p>
         </div>
       </div>
-      <p className="text-blue-500">+${price}/mo</p>
+      <p className="text-blue-500">
+        +${monthYear === 'Monthly' ? item.price + '/mo' : item.price + '/yr'}
+      </p>
     </div>
   )
 }
