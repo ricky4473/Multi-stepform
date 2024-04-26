@@ -6,7 +6,7 @@ import iconarcade from '@/public/images/icon-arcade.svg'
 import iconadvanced from '@/public/images/icon-advanced.svg'
 import iconpro from '@/public/images/icon-pro.svg'
 import PlanButton from '@/components/PlanButton'
-import { InfomationCollection } from '@/app/page'
+import { InfomationCollection } from '@/app/components/GlobalState'
 import { useRouter } from 'next/navigation'
 
 const planArr = monthYear => {

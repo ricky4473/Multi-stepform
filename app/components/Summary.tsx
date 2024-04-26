@@ -1,7 +1,8 @@
 //@ts-nocheck
 'use client'
 import { useState, useContext } from 'react'
-import { InfomationCollection } from '@/app/page'
+import { InfomationCollection } from '@/app/components/GlobalState'
+
 export default function Summary({ setStep }) {
   const [collection, setCollection] = useContext(InfomationCollection)
   const moyr = collection.plan.monthYear === 'Mohthly' ? 'mo' : 'yr'

@@ -1,7 +1,7 @@
 //@ts-nocheck
 'use client'
 import PickAddOns from '@/components/PickAddOns'
-import { InfomationCollection } from '@/app/page'
+import { InfomationCollection } from '@/app/components/GlobalState'
 import { useContext } from 'react'
 
 const PickSelection = monthYear => {

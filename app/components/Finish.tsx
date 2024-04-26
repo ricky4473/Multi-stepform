@@ -5,7 +5,7 @@ import iconthankyou from '@/public/images/icon-thank-you.svg'
 const Finish = () => {
   return (
     <div className="flex flex-col items-center justify-center my-auto">
-      <Image src={iconthankyou} />
+      <Image src={iconthankyou} alt=''/>
       <h1 className="text-2xl font-semibold mt-3">Thank you!</h1>
       <p className="text-slate-400 text-[15px] text-center mt-3">
         Thanks for confirming your subscription! We hope you have fun using our platform. If you

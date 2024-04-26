@@ -23,6 +23,7 @@ const PickAddOns = ({ item, pickSelected, setPickSelected, monthYear }) => {
       } hover:border-blue-500 hover:cursor-pointer rounded-lg p-3 flex flex-row justify-between items-center`}>
       <div className="flex flex-row items-center">
         <Image
+         alt=''
           src={checkmark}
           className={`size-5 text-white 
               border  rounded p-1 mr-4 ${activeClass}`}

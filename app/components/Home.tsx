@@ -1,6 +1,6 @@
 //@ts-nocheck
 'use client'
-import { InfomationCollection } from '@/app/page'
+import { InfomationCollection } from '@/app/components/GlobalState'
 import { useContext, useEffect, useRef, useState } from 'react'
 
 export default function Home({ setStep }) {
