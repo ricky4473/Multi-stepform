@@ -55,9 +55,9 @@ export default function Home({ setStep }) {
     <>
       <div className="var">
         <h1 className="mt-1 text-xl font-semibold">Personal info</h1>
-        <small className="text-slate-400">
+        <p className="text-slate-400 max-sm:text-[15px] max-sm:mt-2 ">
           Please provide your name, email address, and phone number.
-        </small>
+        </p>
         <form className="mt-3" ref={ref}>
           <div className="flex flex-row justify-between items-center">
             <label htmlFor="name" className="text-sm font-bold">
@@ -112,7 +112,7 @@ export default function Home({ setStep }) {
           />
         </form>
       </div>
-      <div className="flex flex-row justify-end">
+      <div className="flex flex-row justify-end max-sm:absolute  max-sm:bottom-0 max-sm:left-0 max-sm:p-3 max-sm:bg-white max-sm:w-full">
         <button className="bg-blue-900 text-white text-xs px-3 py-2 rounded-md" onClick={onClick}>
           Next Step
         </button>
